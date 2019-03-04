@@ -9,12 +9,17 @@ z0  z1  ... zn
 """
 import math
 
+def radian(theta):
+	theta= theta + (math.pi/180)
+	return theta
+
 def make_translate( x, y, z ):
-    m = new_matrix()
+	m = new_matrix()
 	ident(m)
 	m[3][0]=x
 	m[3][1]=y
 	m[3][2]=z
+	print_matrix(m)
 	return m
 	
 def make_scale( x, y, z ):
@@ -23,17 +28,42 @@ def make_scale( x, y, z ):
 	m[0][0]= x
 	m[1][1]= y
 	m[2][2]= z
+	print_matrix(m)
 	return m
 
 def make_rotX( theta ):
-    pass
-
+	theta = radian(theta)
+	m = new_matrix()
+	ident(m)
+	m[1][1] = math.cos(theta)
+	m[1][2] = math.sin(theta)
+	m[2][1] = -1 * math.sin(theta)
+	m[2][2] = math.cos(theta)
+	print_matrix(m)
+	return m
+	
 def make_rotY( theta ):
-    pass
-
+	theta = radian(theta)
+	m = new_matrix()
+	ident(m)
+	m[0][0] = math.cos(theta)
+	m[2][0] = math.sin(theta)
+	m[0][2] = -1 * math.sin(theta)
+	m[2][2] = math.cos(theta)
+	print_matrix(m)
+	return m
+	
 def make_rotZ( theta ):
-    pass
-
+	theta = radian(theta)
+	m = new_matrix()
+	ident(m)
+	m[0][0] = math.cos(theta)
+	m[0][1] = math.sin(theta)
+	m[1][0] = -1 * math.sin(theta)
+	m[1][1] = math.cos(theta)
+	print_matrix(m)
+	return m
+	
 #print the matrix such that it looks like
 #the template in the top comment
 def print_matrix( matrix ):
@@ -78,3 +108,9 @@ def new_matrix(rows = 4, cols = 4):
         for r in range( rows ):
             m[c].append( 0 )
     return m
+
+make_translate(2,3,4)
+make_scale(2,3,4)
+make_rotX(30)
+make_rotY(30)
+make_rotZ(30)
