@@ -109,8 +109,3 @@ def new_matrix(rows = 4, cols = 4):
             m[c].append( 0 )
     return m
 
-make_translate(2,3,4)
-make_scale(2,3,4)
-make_rotX(30)
-make_rotY(30)
-make_rotZ(30)
