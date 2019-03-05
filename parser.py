@@ -38,30 +38,32 @@ def parse_file( fname, points, transform, screen, color ):
 	
 	i=0
 	while (i < len(line)):
-		val = line[i].strip("\n")
+		val = line[i].strip("\n").strip("\r")
 		
 		if (val == "line"):
-			c = val[i+1].strip("\n").split()
-			add_edge(points,int(c[0]),int(c[1]),int(c[2]),int(c[3]),int(c[4]),int(c[5]))
+			c = line[i+1].strip("\n").split(" ")
+			print c
+			add_edge(points, int(c[0]), int(c[1]), int(c[2]), int(c[3]), int(c[4]), int(c[5]))
 			i+=2
 			
 		elif (val == "ident"):
 			ident(transform)
+			i+=1
 
 		elif (val == "scale"):
-			c = val[i+1].strip("\n").split()
+			c = line[i+1].strip("\n").split(" ")
 			m = make_scale(int(c[0]), int(c[1]), int(c[2]))
-			matrix_mult(m, tranform)
+			matrix_mult(m, transform)
 			i+=2
 		
 		elif (val == "translate"):
-			c = val[i+1].strip("\n").split()
+			c = line[i+1].strip("\n").split(" ")
 			m = make_translate(int(c[0]), int(c[1]), int(c[2]))
-			matrix_mult(m, tranform)
+			matrix_mult(m, transform)
 			i+=2
 			
 		elif (val == "rotate"):
-			c = val[i+1].strip("\n").split()
+			c = line[i+1].strip("\n").split(" ")
 			
 			if ([0] == "x"):
 				m = make_rotX(int(c[1]))
@@ -81,9 +83,10 @@ def parse_file( fname, points, transform, screen, color ):
 			clear_screen( screen )
 			draw_lines(points, screen, color )
 			display(screen)
+			i+=1
 			
 		elif (val == "save"):
-			c = val[i+1].strip("\n").split()
+			c = line[i+1].strip("\n").split(" ")
 			clear_screen( screen )
 			draw_lines(points, screen, color )
 			save_extension(screen, c[0])
@@ -91,3 +94,8 @@ def parse_file( fname, points, transform, screen, color ):
 			
 		elif (val == "quit"):
 			i = len(line)
+			
+		else:
+			print(val)
+			
+			
