@@ -39,10 +39,10 @@ def parse_file( fname, points, transform, screen, color ):
 	i=0
 	while (i < len(line)):
 		val = line[i].strip("\n").strip("\r")
+		print val
 		
 		if (val == "line"):
-			c = line[i+1].strip("\n").split(" ")
-			print c
+			c = line[i+1].strip("\n").strip("\r").split(" ")
 			add_edge(points, int(c[0]), int(c[1]), int(c[2]), int(c[3]), int(c[4]), int(c[5]))
 			i+=2
 			
@@ -64,7 +64,7 @@ def parse_file( fname, points, transform, screen, color ):
 			
 		elif (val == "rotate"):
 			c = line[i+1].strip("\n").split(" ")
-			
+			                                                           
 			if ([0] == "x"):
 				m = make_rotX(int(c[1]))
 			if (c[0] == "y"):
@@ -87,7 +87,10 @@ def parse_file( fname, points, transform, screen, color ):
 			
 		elif (val == "save"):
 			c = line[i+1].strip("\n").split(" ")
-			clear_screen( screen )
+			clear_screen(screen)
+			for l in range(len(points)):
+				for p in range(len(points[l])):
+					points[l][p]= int(points[l][p])
 			draw_lines(points, screen, color )
 			save_extension(screen, c[0])
 			i += 2
@@ -97,5 +100,6 @@ def parse_file( fname, points, transform, screen, color ):
 			
 		else:
 			print(val)
+			i+=2
 			
 			

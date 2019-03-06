@@ -1,193 +1,46 @@
-ident
 line
-50 87 0 100 0 0
+0 0 0 100 0 0
 line
-0 0 0 75 43 0
+100 0 0 100 100 0
+line
+100 100 0 0 100 0
+line
+0 100 0 0 0 0
+line
+0 0 100 100 0 100
+line
+100 0 100 100 100 100
+line
+100 100 100 0 100 100
 rotate
-z 10
-apply
+z 20
 line
-50 87 0 100 0 0
+0 100 100 0 0 100
 line
-0 0 0 75 43 0
-apply
+0 0 0 0 0 100
 line
-50 87 0 100 0 0
+0 100 0 0 100 100
 line
-0 0 0 75 43 0
-apply
+100 100 0 100 100 100
 line
-50 87 0 100 0 0
-line
-0 0 0 75 43 0
-apply
-line
-50 87 0 100 0 0
-line
-0 0 0 75 43 0
-apply
-line
-50 87 0 100 0 0
-line
-0 0 0 75 43 0
-apply
-line
-50 87 0 100 0 0
-line
-0 0 0 75 43 0
-apply
-line
-50 87 0 100 0 0
-line
-0 0 0 75 43 0
-apply
-line
-50 87 0 100 0 0
-line
-0 0 0 75 43 0
-apply
-line
-50 87 0 100 0 0
-line
-0 0 0 75 43 0
-apply
-line
-50 87 0 100 0 0
-line
-0 0 0 75 43 0
-apply
-line
-50 87 0 100 0 0
-line
-0 0 0 75 43 0
-apply
-line
-50 87 0 100 0 0
-line
-0 0 0 75 43 0
-apply
-line
-50 87 0 100 0 0
-line
-0 0 0 75 43 0
-apply
-line
-50 87 0 100 0 0
-line
-0 0 0 75 43 0
-apply
-line
-50 87 0 100 0 0
-line
-0 0 0 75 43 0
-apply
-line
-50 87 0 100 0 0
-line
-0 0 0 75 43 0
-apply
-line
-50 87 0 100 0 0
-line
-0 0 0 75 43 0
-apply
-line
-50 87 0 100 0 0
-line
-0 0 0 75 43 0
-apply
-line
-50 87 0 100 0 0
-line
-0 0 0 75 43 0
-apply
-line
-50 87 0 100 0 0
-line
-0 0 0 75 43 0
-apply
-line
-50 87 0 100 0 0
-line
-0 0 0 75 43 0
-apply
-line
-50 87 0 100 0 0
-line
-0 0 0 75 43 0
-apply
-line
-50 87 0 100 0 0
-line
-0 0 0 75 43 0
-apply
-line
-50 87 0 100 0 0
-line
-0 0 0 75 43 0
-apply
-line
-50 87 0 100 0 0
-line
-0 0 0 75 43 0
-apply
-line
-50 87 0 100 0 0
-line
-0 0 0 75 43 0
-apply
-line
-50 87 0 100 0 0
-line
-0 0 0 75 43 0
-apply
-line
-50 87 0 100 0 0
-line
-0 0 0 75 43 0
-apply
-line
-50 87 0 100 0 0
-line
-0 0 0 75 43 0
-apply
-line
-50 87 0 100 0 0
-line
-0 0 0 75 43 0
-apply
-line
-50 87 0 100 0 0
-line
-0 0 0 75 43 0
-apply
-line
-50 87 0 100 0 0
-line
-0 0 0 75 43 0
-apply
-line
-50 87 0 100 0 0
-line
-0 0 0 75 43 0
-apply
-line
-50 87 0 100 0 0
-line
-0 0 0 75 43 0
-apply
-line
-50 87 0 100 0 0
-line
-0 0 0 75 43 0
-apply
+100 0 0 100 0 100
+rotate
+x 20
+rotate
+y 20
 ident
 scale
 2 2 2
 apply
 ident
-translate
-250 250 0
+move
+100 100 0
+apply
+ident
+apply
+ident
+rotate
+y 20
 apply
 save
 pic.png
