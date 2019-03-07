@@ -10,7 +10,7 @@ z0  z1  ... zn
 import math
 
 def radian(theta):
-	theta= theta + (math.pi/180)
+	theta= (theta * math.pi / 180)
 	return theta
 
 def make_translate( x, y, z ):
@@ -39,7 +39,7 @@ def make_rotX( theta ):
 	m[1][2] = math.sin(theta)
 	m[2][1] = -1 * math.sin(theta)
 	m[2][2] = math.cos(theta)
-	print_matrix(m)
+
 	return m
 	
 def make_rotY( theta ):
@@ -50,7 +50,6 @@ def make_rotY( theta ):
 	m[2][0] = math.sin(theta)
 	m[0][2] = -1 * math.sin(theta)
 	m[2][2] = math.cos(theta)
-	print_matrix(m)
 	return m
 	
 def make_rotZ( theta ):
@@ -61,7 +60,7 @@ def make_rotZ( theta ):
 	m[0][1] = math.sin(theta)
 	m[1][0] = -1 * math.sin(theta)
 	m[1][1] = math.cos(theta)
-	print_matrix(m)
+	
 	return m
 	
 #print the matrix such that it looks like
