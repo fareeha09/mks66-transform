@@ -68,14 +68,16 @@ def parse_file( fname, points, transform, screen, color ):
 		elif (val == "rotate"):
 			c = line[i+1].strip("\n").strip("\r").split(" ")
 			print c                                                           
-			if (c[0] == "x"):
+			if (c[0] == 'x'):
 				m = make_rotX(int(c[1]))
-			if (c[0] == "y"):
+			elif (c[0] == 'y'):
 				m = make_rotY(int(c[1]))
-			if (c[0] == "z"):
+			elif (c[0] == 'z'):
 				m = make_rotZ(int(c[1]))
-				
+			else:
+				print("NOT WORKING")	
 			matrix_mult(m,transform)
+			print_matrix(transform)
 			i+=2
 			
 		elif (val == "apply"):
